@@ -15,3 +15,18 @@ struct ExplicitSwiftLintViolationApp: App {
         }
     }
 }
+
+func violateColonSpacing() {
+    let foo :Int = 42
+    print(foo)
+}
+
+func violateTrailingComma() {
+    let foo = [1, 2, 3,]
+    print(foo)
+}
+
+func violateNameLength() {
+    let x = 42
+    print(x)
+}
