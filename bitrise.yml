@@ -5,6 +5,7 @@ project_type: ios
 workflows:
   build:
     steps:
+    - activate-ssh-key@4: {}
     - git-clone@6: {}
     - script:
         inputs:
