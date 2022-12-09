@@ -1,0 +1,18 @@
+format_version: "11"
+default_step_lib_source: https://github.com/bitrise-io/bitrise-steplib.git
+project_type: ios
+workflows:
+  build:
+    steps:
+    - git-clone@6: {}
+    - script:
+        inputs:
+        - content: ./bin/do_lint.sh
+    - script:
+        inputs:
+        - content: ./bin/do_lint.sh --reporter github-actions-logging
+    - xcode-archive-mac@1:
+        inputs:
+        - project_path: ExplicitSwiftLintViolation.xcodeproj
+        - scheme: ExplicitSwiftLintViolation
+        - export_method: none
