@@ -22,6 +22,8 @@ jobs:
           echo Using default scheme: $default
       - name: Explicit Swiftlint
         run: ./bin/do_lint.sh
+      - name: Explicit Swiftlint (with GithubActions reporter)
+        run: ./bin/do_lint.sh --reporter github-actions-logging
       - name: Build
         env:
           scheme: ${{ 'default' }}
