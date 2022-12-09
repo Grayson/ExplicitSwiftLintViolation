@@ -1,3 +1,4 @@
+---
 format_version: "11"
 default_step_lib_source: https://github.com/bitrise-io/bitrise-steplib.git
 project_type: ios
@@ -16,3 +17,7 @@ workflows:
         - project_path: ExplicitSwiftLintViolation.xcodeproj
         - scheme: ExplicitSwiftLintViolation
         - export_method: none
+meta:
+  bitrise.io:
+    stack: osx-xcode-14.1.x-ventura
+    machine_type_id: g2.4core
