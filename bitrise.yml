@@ -1,6 +1,6 @@
 ---
-format_version: "11"
-default_step_lib_source: https://github.com/bitrise-io/bitrise-steplib.git
+format_version: '11'
+default_step_lib_source: 'https://github.com/bitrise-io/bitrise-steplib.git'
 project_type: ios
 workflows:
   build:
@@ -22,3 +22,6 @@ meta:
   bitrise.io:
     stack: osx-xcode-14.1.x-ventura
     machine_type_id: g2.4core
+trigger_map:
+- push_branch: main
+  workflow: build
