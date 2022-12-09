@@ -25,8 +25,3 @@ func violateTrailingComma() {
     let foo = [1, 2, 3,]
     print(foo)
 }
-
-func violateNameLength() {
-    let x = 42
-    print(x)
-}
